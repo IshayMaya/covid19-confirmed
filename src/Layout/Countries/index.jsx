@@ -12,12 +12,17 @@ const Countries = ({countriesData, biggestNumber, getDate}) => {
 
     const NUMBER_OF_COUNTRIES = 7
     const TIMER = 800
+    const DIGIT_WIDTH = 8
+    const CONTAINER_PADDING = 20 * 2
+    const COVIG_IMG_WIDTH = 30
     const CONTAINER_WIDTH = containerRef.current?.width
 
     useEffect(() => {
         if (containerRef.current) {
-            const containerWidth = containerRef.current.getBoundingClientRect().width
-            const ratio = Math.floor((biggestNumber) / ( containerWidth - 200 ))
+            const { width: containerWidth } = containerRef.current.getBoundingClientRect()
+            const { length: biggestNumberLength } = biggestNumber.toString()
+            const containerWidthMargins =  biggestNumberLength * DIGIT_WIDTH + COVIG_IMG_WIDTH + CONTAINER_PADDING
+            const ratio = Math.floor((biggestNumber) / ( containerWidth - containerWidthMargins ))
             setBarRatio(ratio)
         }
 

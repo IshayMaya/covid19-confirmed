@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styles from './styles.module.scss'
 
-const covidImg = require('../../../assets/images/icon.png')
+const covidImg = require('../../../assets/images/virus.png')
 
 
 const Country = ({name, data, rank, flagUrl, ratio, active, isLast, timer}) => {

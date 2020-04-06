@@ -29,7 +29,7 @@ const Countries = ({countriesData, biggestNumber, getDate}) => {
 
     useEffect(() => {
         let interval;
-        if (countriesData)  {
+        if (countriesData && countriesData.length)  {
             interval = setInterval(() => {
                 if (currentCount === countriesData[0].data.length - 1) {
                     clearInterval(interval)

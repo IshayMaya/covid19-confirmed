@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import styles from './styles.module.scss'
 
+const covidImg = require('../../../assets/images/icon.png')
+
 
 const Country = ({name, data, rank, flagUrl, ratio, active, isLast, timer}) => {
     
@@ -8,11 +10,11 @@ const Country = ({name, data, rank, flagUrl, ratio, active, isLast, timer}) => {
 
     useEffect(() => {
         let climbingNumbersInterval;
-        if (!confirmed || !active || data.confirmed == confirmed) setConfirmed(data.confirmed)
+        if (!confirmed || !active || data.confirmed === confirmed) setConfirmed(data.confirmed)
         else {
             let counter = 0;
             climbingNumbersInterval = setInterval(() => {
-                if (counter == data.confirmed) {
+                if (counter === data.confirmed) {
                     clearInterval(climbingNumbersInterval)
                     climbingNumbersInterval = null;
                 }
@@ -41,6 +43,9 @@ const Country = ({name, data, rank, flagUrl, ratio, active, isLast, timer}) => {
                 <img src={flagUrl} alt={name}/>
             </div>
             <h1>&nbsp;{confirmed.toLocaleString()}</h1>
+            <div className={styles.covidImg}>
+                <img className={active ? styles.pump : '' } src={covidImg} alt=""/>
+            </div>
         </div>
     )
 }

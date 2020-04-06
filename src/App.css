@@ -1,5 +1,20 @@
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  font-family: 'Do Hyeon', sans-serif;
+  color: #f6f6f6;
+}
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  height: 100vh;
+  /* background: #0000007d; */
+  /* background: black; */
+  /* background-image: url('./assets/images/covid.jpg'); */
+  /* background-size: cover; */
+  /* background-position: center */
 }
 
 .App-logo {

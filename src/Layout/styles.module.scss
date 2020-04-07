@@ -1,10 +1,9 @@
 .layout {
     height: 100%;
-    padding: 20px;
+    padding: 20px 20px 0;
 
-    >h1{
-        // padding: 20px 10px 30px 10px;
-        padding: 0 0 10px 0;
+    >h1 {
+        // padding: 0 0 10px 0;
         font-size: 45px;
         font-weight: 900;
         text-align: left;
@@ -12,11 +11,10 @@
 
     .backgroundText {
         position: absolute;
-        // top: 80%;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        font-size: 120px;
+        font-size: 110px;
         color: #f6f6f6;
         text-align: start;
         z-index: -1;
